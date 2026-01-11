@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #dae4ee;
+  color: #3a2a4d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.home {
+  text-align: center;
+  max-width: 600px;
+  padding: 2rem;
+}
+
+h1 {
+  font-family: "Cinzel", serif;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  opacity: 0.85;
+  margin-bottom: 0.5rem;
+}
+
+.hint {
+  font-size: 0.9rem;
+  opacity: 0.6;
+  margin-bottom: 2rem;
+}
+
+/* Símbolos */
+.symbols {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 2.5rem;
+}
+
+.symbol {
+  font-size: 1.5rem;
+  background: white;
+  border: 2px solid #d6bdfc;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.symbol:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px #cfa9ff;
+}
+
+.symbol.active {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px #cfa9ff;
+}
+
+/* Shake al error */
+.symbol.error {
+  animation: shake 0.35s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+/* Botón Entrar */
+#enterBtn {
+  padding: 14px 36px;
+  border-radius: 999px;
+  border: none;
+  background: #9200ff;
+  color: white;
+  font-size: 1.05rem;
+  cursor: pointer;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+#enterBtn.show {
+  opacity: 1;
+  transform: scale(1);
+  animation: glow 1s ease forwards;
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 0px #9200ff; }
+  50% { box-shadow: 0 0 15px #cfa9ff; }
+  100% { box-shadow: 0 0 15px #9200ff; }
+}
+
+#enterBtn:hover {
+  transform: scale(1.05);
+}
+
+/* Acceso directo */
+.skip {
+  display: block;
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  opacity: 0.6;
+  text-decoration: none;
+  color: inherit;
+}

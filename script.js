@@ -1,4 +1,68 @@
 
+// HOME
+const symbols = document.querySelectorAll(".symbol");
+const enterBtn = document.getElementById("enterBtn");
+
+let currentStep = 1;
+
+// Símbolos correctos en orden
+const correctCount = 5;
+
+symbols.forEach(symbol => {
+  symbol.addEventListener("click", () => {
+
+    if (symbol.classList.contains("trap")) {
+      // Si es trampa, reinicia puzzle
+      triggerError();
+      return;
+    }
+
+    const order = Number(symbol.dataset.order);
+
+    if (order === currentStep) {
+      symbol.classList.add("active");
+      currentStep++;
+
+      if (currentStep > correctCount) {
+        showEnterButton();
+      }
+
+    } else {
+      triggerError();
+    }
+  });
+
+  // Microbrillo al pasar por el símbolo correcto siguiente
+  symbol.addEventListener("mouseenter", () => {
+    if (Number(symbol.dataset.order) === currentStep) {
+      symbol.style.boxShadow = "0 0 25px #d6bdfc";
+    }
+  });
+  symbol.addEventListener("mouseleave", () => {
+    symbol.style.boxShadow = "";
+  });
+});
+
+function triggerError() {
+  symbols.forEach(symbol => {
+    symbol.classList.remove("active");
+    symbol.classList.remove("error");
+    void symbol.offsetWidth; // reinicia animación
+    symbol.classList.add("error");
+  });
+  currentStep = 1;
+}
+
+function showEnterButton() {
+  enterBtn.classList.add("show");
+
+  // Botón solo se puede pulsar una vez
+  enterBtn.addEventListener("click", () => {
+    window.location.href = "landing.html";
+  }, { once: true });
+}
+
+
 // Countdown
 const countdown = () => {
   const eventDate = new Date('2026-09-12T00:00:00');

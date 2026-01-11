@@ -315,13 +315,13 @@ div[id] {
 }
 .rsvp-form button {
  cursor: pointer;
- background: var(--deep);
+ background: #ad9cec;
  color: #fff;
  border: none;
  transition: background 0.3s;
 }
 .rsvp-form button:hover {
- background: #ad9cec;
+ background: var(--deep);
 }
 
 /* Loading Spinner */
