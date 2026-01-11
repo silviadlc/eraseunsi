@@ -27,7 +27,7 @@
 
     <!-- NAVBAR -->
     <nav class="navbar">
-      <a href="#galeria">Galería</a>
+      <a href="#nuestra-historia">Galería</a>
       <a href="#instagram">Instagram</a>
       <a href="#ubicacion">Ubicación</a>
       <a href="#rsvp">RSVP</a>
@@ -96,7 +96,7 @@
       <!-- GALERÍA -->
 
       <!-- Carrusel de Galería -->
-      <div class="swiper" data-aos="fade-up">
+      <div id="galeria" class="swiper" data-aos="fade-up">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img src="img/guapos.jpg" alt="Foto 2" />
@@ -213,6 +213,14 @@
         <button type="submit">Enviar confirmación</button>
       </form>
     </section>
+
+    <!-- Spinner de carga -->
+    <div id="loading-spinner" class="loading-spinner hidden">
+      <div class="spinner-overlay">
+        <div class="spinner"></div>
+        <p>Subiendo foto y enviando confirmación...</p>
+      </div>
+    </div>
 
     <!-- Aquí pondremos el pop-up -->
     <div id="popup" class="popup hidden">

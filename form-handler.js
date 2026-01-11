@@ -24,8 +24,14 @@ async function handleFormSubmit(event) {
 
   const form = event.target;
   const submitButton = form.querySelector('button[type="submit"]');
+  const spinner = document.getElementById("loading-spinner");
 
   try {
+    // Mostrar spinner de carga
+    if (spinner) {
+      spinner.classList.remove("hidden");
+    }
+
     // Deshabilitar el botón de envío y mostrar estado de carga
     submitButton.disabled = true;
     submitButton.textContent = "Enviando...";
@@ -73,6 +79,11 @@ async function handleFormSubmit(event) {
       "error"
     );
   } finally {
+    // Ocultar spinner de carga
+    if (spinner) {
+      spinner.classList.add("hidden");
+    }
+
     // Restaurar el botón de envío
     submitButton.disabled = false;
     submitButton.textContent = "Enviar confirmación";
