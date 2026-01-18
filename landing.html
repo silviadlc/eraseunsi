@@ -28,9 +28,9 @@
     <!-- NAVBAR -->
     <nav class="navbar">
       <a href="#nuestra-historia">Galería</a>
-      <a href="#instagram">Instagram</a>
       <a href="#ubicacion">Ubicación</a>
-      <a href="#rsvp">RSVP</a>
+      <a href="#rsvp">Formulario</a>
+      <a href="#faqs">FAQs</a>
     </nav>
 
     <!-- HERO -->
@@ -69,7 +69,7 @@
           <p>
             Nos conocimos entre tambores, ritmo y danza, sin imaginar que ese
             grupo nos cambiaría la vida. Fueron unos inicios inciertos, pero las
-            aventuras, los viajes y los sueños compartidos se fusionaron una vez
+            aventuras, los viajes, los juegos y los sueños compartidos, se fusionaron una vez
             y no han parado de crecer.
           </p>
           <p>
@@ -82,7 +82,7 @@
           <p>
             Esta boda no solo celebra nuestro amor, sino también es un homenaje
             que os queremos dar a vosotros y vosotras, a las personas que nos
-            han acompañado en este camino. Familia, amistades, momentos… todo
+            han acompañado en este camino. Familia, amistades, momentos… Todo
             forma parte de esta historia que hoy continúa escribiéndose.
           </p>
           <p>
@@ -99,20 +99,28 @@
       <div id="galeria" class="swiper" data-aos="fade-up">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="img/guapos.jpg" alt="Foto 2" />
+            <img src="img/paisvasc.jpeg" alt="Foto 7" />
           </div>
           <div class="swiper-slide">
-            <img src="img/tren.jpg" alt="Foto 4" />
+            <img src="img/francia.jpeg" alt="Foto 4" />
           </div>
           <div class="swiper-slide">
             <img src="img/fiesta.jpg" alt="Foto 5" />
           </div>
-          <div class="swiper-slide"><img src="img/dos.jpg" alt="Foto 5" /></div>
+          <div class="swiper-slide">
+            <img src="img/dos.jpg" alt="Foto 5" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/guapos.jpg" alt="Foto 2" />
+          </div>
           <div class="swiper-slide">
             <img src="img/avion.jpg" alt="Foto 5" />
           </div>
           <div class="swiper-slide">
-            <img src="img/santjordi.jpg" alt="Foto 1" />
+            <img src="img/contomas.jpeg" alt="Foto 1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/hp.jpeg" alt="Foto 6" />
           </div>
           <!-- Agrega más imágenes aquí -->
         </div>
@@ -128,17 +136,13 @@
     <div id="instagram" class="bg-lav" data-aos="zoom-in">
       <h2>#SilviaAndresWedding</h2>
       <p>Sigue y comparte nuestros momentos con el hashtag oficial</p>
-      <!-- <div class="insta-wrapper">
-       Sustituir «xxxxxxxxxxxxx» por el ID real de tu widget LightWidget 
-      <iframe src="https://cdn.lightwidget.com/widgets/xxxxxxxxxxxxx.html" scrolling="no" allowtransparency="true" style="width:100%;border:0;overflow:hidden;height:600px;"></iframe>
-    </div> -->
     </div>
 
     <!-- MAPA -->
     <section id="ubicacion" class="bg-mint" data-aos="fade-up">
       <h2>Horarios y ubicación</h2>
       <p><b>Día:</b> 12 de septiembre de 2026</p>
-      <p><b>Hora:</b> 17:00h</p>
+      <p><b>Hora:</b> 18:00</p>
       <p>
         <b>Lugar:</b>
         <a class="link" href="https://calparadet.com/">Cal Paradet</a>
@@ -180,6 +184,11 @@
     <!-- RSVP -->
     <section id="rsvp" class="bg-pink" data-aos="fade-up">
       <h2>Confirmación de Asistencia</h2>
+      <p>
+        Nos gustaría saber si podrás acompañarnos en este día tan especial.
+        Por favor, necesitamos que cada invitado rellene el formulario para confirmar su asistencia
+        y cualquier detalle adicional que debamos tener en cuenta.
+      </p>
       <form id="rsvp-form" class="rsvp-form" enctype="multipart/form-data">
         <input type="text" name="name" placeholder="Nombre completo" required />
         <span
@@ -189,6 +198,21 @@
         <select name="dormir" required>
           <option value="" disabled selected>
             ¿Te gustaría quedarte a dormir?
+          </option>
+          <option value="Sí">Sí</option>
+          <option value="No">No</option>
+        </select>
+        <select name="noches" required style="display:none;">
+          <option value="" disabled selected>
+            ¿Qué días?
+          </option>
+          <option value="viernes">Viernes</option>
+          <option value="sábado">Sábado</option>
+          <option value="ambos">Ambos</option>
+        </select>
+        <select name="noches" required>
+          <option value="" disabled selected>
+            ¿Quieres menú vegetariano?
           </option>
           <option value="Sí">Sí</option>
           <option value="No">No</option>
@@ -204,11 +228,39 @@
           name="diet"
           rows="3"
           placeholder="Comenta aquí dudas y/o alergias alimentarias"></textarea>
-        <label for="imagen">Adjunta una foto tuya en solitario:</label>
+        <label for="imagen">Adjunta una foto tuya en solitario:</br>
+        <span style="font-size: 12px;">*Esta foto no será publicada, solamente será para uso exclusivo del evento.</span></label>
         <input type="file" id="imagen" name="imagen" accept="image/*" />
+
         <button type="submit">Enviar confirmación</button>
       </form>
     </section>
+
+    <!-- FAQ -->
+    <section id="faqs" class="faqs">
+      <h2>Preguntas frecuentes</h2>
+
+      <ul class="faq-list">
+        <li class="faq-item">
+          <button type="button" class="faq-question">
+            ¿Hay código de vestimenta?
+          </button>
+          <div class="faq-answer">
+            <p>Elegante informal, lo importante es que vengas cómodo/a. Ten en cuenta que gran parte del terreno es de tierra con piedras, aconsejamos un calzado práctico.</p>
+          </div>
+        </li>
+
+        <li class="faq-item">
+          <button type="button" class="faq-question">
+            ¿Cómo se puede col·laborar?
+          </button>
+          <div class="faq-answer">
+            <p>Cualquier ayuda será bienvenida. Si alguien prefiere hacer algún detalle en efectivo, nos será más que útil para hacer el cambio de divisa cuando llegue el viaje de novios. ¡Muchas gracias de antemano!</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
 
     <!-- Spinner de carga -->
     <div id="loading-spinner" class="loading-spinner hidden">
@@ -259,6 +311,24 @@
     </script>
 
     <script>
+      //fAQ Accordion
+      document.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const item = btn.closest('.faq-item');
+
+          // Cerrar cualquier otro FAQ abierto
+          document.querySelectorAll('.faq-item.active').forEach(openItem => {
+            if (openItem !== item) {
+              openItem.classList.remove('active');
+            }
+          });
+
+          // Abrir o cerrar el FAQ actual
+          item.classList.toggle('active');
+        });
+      });
+
+
       // Detectar secciones visibles y activar animación
       const observer = new IntersectionObserver(
         (entries) => {
