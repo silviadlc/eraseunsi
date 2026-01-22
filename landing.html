@@ -195,22 +195,21 @@
           >En la casa hay habitaciones para quedarse a dormir. Tendrán prioridad
           los invitados que vienen de lejos, pero...</span
         >
-        <select name="dormir" required>
+        <select name="dormir" id="dormir-select" required>
           <option value="" disabled selected>
             ¿Te gustaría quedarte a dormir?
           </option>
           <option value="Sí">Sí</option>
           <option value="No">No</option>
         </select>
-        <select name="noches" required style="display:none;">
+        <select name="noches" id="noches-select" style="display:none;">
           <option value="" disabled selected>
             ¿Qué días?
           </option>
-          <option value="viernes">Viernes</option>
-          <option value="sábado">Sábado</option>
-          <option value="ambos">Ambos</option>
+          <option value="sabado">Sábado</option>
+          <option value="ambos">Viernes y Sábado</option>
         </select>
-        <select name="noches" required>
+        <select name="vegetariano" required>
           <option value="" disabled selected>
             ¿Quieres menú vegetariano?
           </option>
@@ -228,7 +227,7 @@
           name="diet"
           rows="3"
           placeholder="Comenta aquí dudas y/o alergias alimentarias"></textarea>
-        <label for="imagen">Adjunta una foto tuya en solitario:</br>
+        <label for="imagen">Adjunta una foto tuya en solitario: <span style="color: red;">*</span></br>
         <span style="font-size: 12px;">*Esta foto no será publicada, solamente será para uso exclusivo del evento.</span></label>
         <input type="file" id="imagen" name="imagen" accept="image/*" />
 

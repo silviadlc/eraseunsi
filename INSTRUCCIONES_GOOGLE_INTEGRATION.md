@@ -59,10 +59,27 @@ El script creará automáticamente las siguientes columnas:
 - Timestamp
 - Nombre Completo
 - ¿Quedarse a dormir?
+- **¿Qué noches?** (Viernes/Sábado/Ambos/No aplica)
+- **¿Menú vegetariano?** (Sí/No)
 - ¿Tiene alergias?
 - Comentarios sobre dieta/alergias
 - URL de la imagen
 - Estado
+
+**IMPORTANTE**: Asegúrate de que el Google Apps Script incluya estos campos en el orden correcto:
+```javascript
+sheet.appendRow([
+  new Date(),
+  name,
+  dormir,
+  noches,        // NUEVO: debe estar incluido
+  vegetariano,   // NUEVO: debe estar incluido
+  alergia,
+  diet,
+  imageUrl,
+  'Procesado'
+]);
+```
 
 ## Solución de Problemas
 
