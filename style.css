@@ -348,6 +348,7 @@ div[id] {
   border: none;
   font-size: 1.1rem;
   font-weight: 500;
+  font-weight: bold;
   color: #43326d;
   text-align: left;
   cursor: pointer;
