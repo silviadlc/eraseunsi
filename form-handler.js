@@ -130,7 +130,7 @@ async function handleFormSubmit(event) {
 
   if (result.success) {
    showPopup(
-    "¡Confirmación enviada correctamente! Gracias por confirmar tu asistencia.",
+    "¡Confirmación enviada correctamente! Gracias por sumar en esta historia.",
     "success"
    );
    form.reset(); // Limpiar el formulario
