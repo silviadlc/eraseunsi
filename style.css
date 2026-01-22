@@ -375,6 +375,7 @@ div[id] {
 .faq-item.active .faq-answer {
   max-height: 500px; /* suficiente para cualquier respuesta */
   opacity: 1;
+  font-size: 0.9rem;
   margin-top: 0.5rem;
 }
 
