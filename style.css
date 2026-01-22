@@ -272,6 +272,10 @@ div[id] {
  text-decoration: none;
 }
 
+.link{
+ text-decoration: none;
+}
+
 /* Map */
 .map-responsive {
  position: relative;
@@ -325,6 +329,10 @@ div[id] {
 }
 
 /* Faqs */
+.camping, .info {
+  font-size: 0.9rem;
+
+}
 .faqs {
   max-width: auto;
   background: var(--white-bg);
