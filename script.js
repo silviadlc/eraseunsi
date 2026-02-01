@@ -44,10 +44,6 @@ symbols.forEach(symbol => {
 });
 
 function triggerError() {
-  if (navigator.vibrate) {
-    navigator.vibrate(80);
-  }
-  
   symbols.forEach(symbol => {
     symbol.classList.remove("active");
     symbol.classList.remove("error");

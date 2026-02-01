@@ -78,7 +78,6 @@ h1 {
 .symbol:focus,
 .symbol:active {
   outline: none;
-  box-shadow: none;
 }
 
 .symbol {
