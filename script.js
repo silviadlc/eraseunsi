@@ -9,7 +9,7 @@ let currentStep = 1;
 const correctCount = 5;
 
 symbols.forEach(symbol => {
-  symbol.addEventListener("click", () => {
+  symbol.addEventListener("pointerdown", () => {
 
     if (symbol.classList.contains("trap")) {
       // Si es trampa, reinicia puzzle
@@ -44,9 +44,16 @@ symbols.forEach(symbol => {
 });
 
 function triggerError() {
+  if (navigator.vibrate) {
+    navigator.vibrate(80);
+  }
+  
   symbols.forEach(symbol => {
     symbol.classList.remove("active");
     symbol.classList.remove("error");
+    symbol.style.boxShadow = ""; // 👈 limpia microbrillo
+    symbol.blur();   
+
     void symbol.offsetWidth; // reinicia animación
     symbol.classList.add("error");
   });
@@ -58,7 +65,7 @@ function showEnterButton() {
 
   // Botón solo se puede pulsar una vez
   enterBtn.addEventListener("click", () => {
-    window.location.href = "landing.html";
+    window.location.href = "info.html";
   }, { once: true });
 }
 
